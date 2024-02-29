@@ -1,2 +1,0 @@
-# Bus_Station_19
-ParallelProgrammingLabs
