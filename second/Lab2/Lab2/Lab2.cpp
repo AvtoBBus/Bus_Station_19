@@ -40,7 +40,6 @@ void read_matrix(vector<vector<int>>& matrix, int size, string filename, bool fi
 
 double mul_matrix(const vector<vector<int>>& matrix_1, const vector<vector<int>>& matrix_2, vector<vector<int>>& matrix_result)
 {
-
     double wTime = omp_get_wtime();
 
     int i = 0, j = 0, k = 0;
@@ -63,7 +62,7 @@ double mul_matrix(const vector<vector<int>>& matrix_1, const vector<vector<int>>
     return wTime;
 }
 
-void write_result(string filename, vector<vector<int>>& matrixRes, int size, int threadNum, double wTime)
+void write_result(string filename, vector<vector<int>>& matrixRes, int size, int threadNum, vector<double> allTimes)
 {
     ofstream data;
     data.open(filename);
@@ -91,7 +90,11 @@ void write_result(string filename, vector<vector<int>>& matrixRes, int size, int
         data << endl;
     }
 
-    result << "Size: " << size << " Threads: " << threadNum << " Time: " << wTime << endl;
+    ss.str("");
+    for (int i = 0; i < 10; i++)
+        ss << allTimes[i] << " ";
+
+    result << "Size: " << size << " Threads: " << threadNum << " Time: " << ss.str() << endl;
     data.close();
     result.close();
 }
@@ -143,9 +146,14 @@ int main(int argc, char* argv[])
 
     cout << "current thread number: " << omp_get_max_threads() << endl;
 
-    double wTime = mul_matrix(matrixA, matrixB, matrixRes);
+    vector<double> allTimes;
 
-    write_result(mRes_filename, matrixRes, SIZE, THREAD_NUM, wTime);
+    for (int i = 0; i < 10; i++)
+    {
+        allTimes.push_back(mul_matrix(matrixA, matrixB, matrixRes));
+    }
+
+    write_result(mRes_filename, matrixRes, SIZE, THREAD_NUM, allTimes);
 
     return 0;
 

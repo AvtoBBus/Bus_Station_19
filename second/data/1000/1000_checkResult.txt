@@ -1,0 +1,9 @@
+Matrix size: 1000 Threads number: 1 Correct: True
+Matrix size: 1000 Threads number: 2 Correct: True
+Matrix size: 1000 Threads number: 4 Correct: True
+Matrix size: 1000 Threads number: 6 Correct: True
+Matrix size: 1000 Threads number: 8 Correct: True
+Matrix size: 1000 Threads number: 10 Correct: True
+Matrix size: 1000 Threads number: 12 Correct: True
+Matrix size: 1000 Threads number: 14 Correct: True
+Matrix size: 1000 Threads number: 16 Correct: True

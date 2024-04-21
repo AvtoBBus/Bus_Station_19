@@ -1,0 +1,7 @@
+Result with 10 -> Equal
+Result with 100 -> Equal
+Result with 500 -> Equal
+Result with 700 -> Equal
+Result with 1000 -> Equal
+Result with 1500 -> Equal
+Result with 2000 -> Equal
