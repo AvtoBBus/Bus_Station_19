@@ -1,0 +1,1 @@
+Size: 600 Threads: 1 Time: 5.78223

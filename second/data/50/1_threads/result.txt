@@ -1,0 +1,1 @@
+Size: 50 Threads: 1 Time: 0.0034122

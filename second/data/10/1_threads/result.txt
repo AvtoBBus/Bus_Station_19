@@ -1,0 +1,1 @@
+Size: 10 Threads: 1 Time: 4.26001e-05
