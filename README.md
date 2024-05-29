@@ -27,3 +27,8 @@
 Результаты зависимости времени от числа потоков представлены на графике:
 
 ![image](https://github.com/AvtoBBus/Bus_Station_19/blob/cd787724a2b0607e7d5a8d12f3713829b036729e/second/img.png)
+
+
+## Лабораторная 3
+В данной л/р был частичено изменён код из л/р №1 для параллельной работы по технологии MPI.
+Отчёт по данной л/приведён в файле [отчёт.ipynb](https://github.com/AvtoBBus/Bus_Station_19/blob/main/third/%D0%BE%D1%82%D1%87%D0%B5%D1%82.ipynb)
